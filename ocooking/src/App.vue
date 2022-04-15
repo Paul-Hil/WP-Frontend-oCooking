@@ -1,10 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
+  <div id="app">
+
+    <oCookingHeader />
+
+    <router-view/>
+
+    <oCookingFooter />
   </div>
-  <router-view/>
 </template>
+
+<script>
+import OCookingHeader from './components/OCookingHeader.vue';
+import OCookingFooter from './components/OCookingFooter.vue';
+export default ({
+  name: 'App',
+  components: {
+    OCookingHeader,
+    OCookingFooter
+  }
+})
+</script>
+
 
 <style lang="scss">
 #app {
@@ -14,14 +30,11 @@
   text-align: center;
   color: #2c3e50;
 }
-
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }

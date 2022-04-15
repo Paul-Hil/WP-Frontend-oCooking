@@ -1,18 +1,13 @@
 <template>
   <div class="home">
-    <RecipeList />
+    <img alt="Vue logo" src="../assets/logo.png">
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import RecipeList from '@/components/RecipeList.vue'
 
 export default {
   name: 'Home',
-  components: {
-    RecipeList,
-        
-  }
 }
 </script>
